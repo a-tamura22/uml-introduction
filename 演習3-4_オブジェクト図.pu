@@ -1,0 +1,18 @@
+@startuml ユースケース図
+'車にはタイヤが４本装着されている。車クラスとタイヤクラスの関係をオブジェクト図で表現しなさい。
+left to right direction
+object "<u>車:車クラス</u>" as car {
+}
+object "<u>前輪1:タイヤクラス</u>" as T1 {
+}
+object "<u>前輪2:タイヤクラス</u>" as T2 {
+}
+object "<u>後輪3:タイヤクラス</u>" as T3 {
+}
+object "<u>後輪4:タイヤクラス</u>" as T4 {
+}
+car -- T1
+car -- T2
+car -- T3
+car -- T4
+@enduml

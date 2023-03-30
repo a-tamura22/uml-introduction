@@ -1,0 +1,12 @@
+@startuml ユースケース図
+left to right direction
+'車にはタイヤが４本装着されている。車クラスとタイヤクラスの関係をクラス図で表現しなさい。
+class 車 {
+-メーカー:String
+}
+
+class タイヤ {
+-メーカー:String
+}
+
+車 "1" *-- "4" タイヤ
