@@ -7,14 +7,14 @@ participant ":予約" as Y
 skinparam style strictuml
 
 activate control
-activate hotel
-
 control -> hotel : 予約する()
+activate hotel
 create Y
 hotel -> Y : <<create>>
 
 hotel -> hotel: 予約登録()
 activate hotel
+deactivate hotel
 deactivate hotel
 
 @enduml
