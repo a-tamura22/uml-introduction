@@ -1,10 +1,8 @@
 @startuml 予約
 hide footbox
-participant ":データ更新コントローラ" as control
+participant ":データ更新コントローラ" as control <<control>>
 participant ":ホテル" as hotel
 participant ":予約" as Y 
-' 厳密なUMLに準拠する
-skinparam style strictuml
 
 activate control
 control -> hotel : 予約する()

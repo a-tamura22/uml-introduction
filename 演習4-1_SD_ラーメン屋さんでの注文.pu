@@ -3,15 +3,19 @@ hide footbox
 Actor 客 as customer
 participant ":フロア店員" as salesperson
 participant ":料理人" as cook
-' 厳密なUMLに準拠する
-skinparam style strictuml
+
 activate customer
-activate salesperson
-activate cook
+
 mainframe sd ラーメン屋さん
 customer -> salesperson : ラーメンを注文
+
+activate salesperson
 salesperson -> cook : 調理を指示する
+
+activate cook
 cook -> cook :調理をする
 salesperson <<-- cook : ラーメン
+deactivate cook
 customer <<-- salesperson : ラーメン
+deactivate salesperson
 @enduml
