@@ -1,12 +1,11 @@
-@startuml ラーメン
+@startuml
 hide footbox
 Actor 客 as customer
 participant ":フロア店員" as salesperson
 participant ":料理人" as cook
+mainframe sd ラーメン屋さん
 
 activate customer
-
-mainframe sd ラーメン屋さん
 customer -> salesperson : ラーメンを注文
 
 activate salesperson
