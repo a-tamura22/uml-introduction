@@ -1,0 +1,12 @@
+@startuml プリント
+' left to right direction
+[*] -right-> 待機中
+state c <<choice>>
+state c <<choice>>
+待機中-down-> c : スキャンする
+c --> 印刷中 : 印刷ができる
+c -right-> 用紙無し: 印刷できない
+' PlantUMLに結合点の表示形式はない
+印刷中-right-> [*]
+用紙無し --> [*]
+@enduml
