@@ -1,0 +1,18 @@
+@startuml シーケンス図
+hide footbox
+Actor 客
+participant ":料金装置" as A
+participant ":ボタン" as B
+participant ":ベンダー装置" as C
+activate 客
+activate A
+activate B
+activate C
+客 -> A: 料金を入れる
+A ->B: 料金投入完了信号
+B --> 客
+客 -> B:ボタンを押す
+B -> C: ドリンクの種類の信号
+C -> C:　ドリンクを排出
+C --> 客: ドリンク
+@enduml

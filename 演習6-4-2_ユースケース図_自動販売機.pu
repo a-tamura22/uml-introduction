@@ -1,0 +1,16 @@
+@startuml ユースケース図
+    left to right direction
+    actor 客
+    actor ベンダー
+
+    rectangle 自動販売機 {
+        usecase お金を入れる
+        usecase ボタンを押す
+        usecase ジュースを出す
+    }
+
+    客 -- お金を入れる
+    客 -- ボタンを押す
+    客 -- ジュースを出す
+    ベンダー -- ジュースを出す
+    ベンダー -- お金を入れる
