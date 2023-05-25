@@ -1,0 +1,13 @@
+@startuml ユースケース図
+    left to right direction
+    actor ユーザー
+    actor 光センサー
+    actor 左右モーター
+
+    rectangle ライントレーサー {
+        usecase ラインの右境界線上を進む as A
+    }
+
+    ユーザー -- A
+    A -- 光センサー
+    A -- 左右モーター
