@@ -1,0 +1,13 @@
+@startuml 演習6-5-3
+left to right direction
+state 電源SW.ON{
+右施回 -> 左施回 : ラインを外れる（光センサーが明るい）
+右施回 : 右モータ = OFF
+左施回 : 左モータ = ON
+左施回 -> 右施回 : ラインに乗る（光センサーが暗い）
+右施回 : 左モータ = ON
+左施回 : 右モータ = OFF
+}
+電源SW.OFF --> 電源SW.ON : スイッチを入れる
+電源SW.ON --> 電源SW.OFF : スイッチを切る
+@enduml
